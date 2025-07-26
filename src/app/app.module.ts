@@ -9,6 +9,7 @@ import { ReferencesComponent } from './references/references.component';
 import { SkillsComponent } from './skills/skills.component';
 import { EducationComponent } from './education/education.component';
 import { PersonalinfoComponent } from './personalinfo/personalinfo.component';
+import { IntegrityComponent } from './integrity/integrity.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PersonalinfoComponent } from './personalinfo/personalinfo.component';
     ReferencesComponent,
     SkillsComponent,
     EducationComponent,
-    PersonalinfoComponent
+    PersonalinfoComponent,
+    IntegrityComponent
   ],
   imports: [
     BrowserModule,
