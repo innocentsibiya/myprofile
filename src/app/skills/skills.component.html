@@ -1,1 +1,7 @@
-<p>skills works!</p>
+<h1>TECHNICAL SKILLS</h1>
+<div class="skills">
+    <div *ngFor="let item of skillsList" class="skill-item">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.names }}</p>
+    </div>
+</div>
