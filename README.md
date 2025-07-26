@@ -1,27 +1,70 @@
-# Myprofile
+# 🧠 My Profile – Resume Website (Built with Angular & TypeScript)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+Welcome! This is a personal **resume website** built with **Angular** and **TypeScript**, designed to showcase both my professional background and my frontend development skills. It is deployed on **GitHub Pages** via the [`innocentsibiya/myprofile`](https://github.com/innocentsibiya/myprofile) repository.
 
-## Development server
+🙋‍♂️ About Me
+I'm a developer passionate about clean, scalable code and modern web technologies. This resume site is more than a portfolio—it's a working example of what I can do with Angular and TypeScript.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🌟 Purpose
 
-## Code scaffolding
+This project serves two main goals:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Present my resume as a responsive, interactive website**
+2. **Demonstrate my skills with Angular and TypeScript** through a real-world application
 
-## Build
+## 🚀 Live Demo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+🖥️ [View My Resume Website on GitHub Pages](https://innocentsibiya.github.io/myprofile/)
 
-## Running unit tests
+## 🛠️ Built With
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Angular** – Component-based frontend framework
+- **TypeScript** – Typed superset of JavaScript for safer code
+- **SCSS/CSS** – For styling and layout
+- **Angular CLI** – For scaffolding, building, and testing
+- **GitHub Pages** – For free static hosting
 
-## Running end-to-end tests
+## 📁 Project Structure
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+/
+├── src/                  # Angular app source code
+│   ├── app/              # Components, services, models
+│   ├── assets/           # Images, fonts, etc.
+│   └── index.html        # Root HTML
+├── angular.json          # Angular workspace configuration
+├── tsconfig.json         # TypeScript config
+├── package.json          # Project metadata and dependencies
+├── docs/                 # Compiled app output for GitHub Pages
+└── README.md             # This file
 
-## Further help
+🧪 Run Locally
+To set up and run the project locally:
+git clone https://github.com/innocentsibiya/myprofile.git
+cd myprofile
+npm install
+ng serve
+Then open http://localhost:4200 in your browser.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+🚀 Deploying to GitHub Pages
+This project uses the docs/ folder method for GitHub Pages. To deploy:
+
+Build the app with the --output-path set to docs and --base-href set to your repo name:
+ng build --output-path docs --base-href /myprofile/
+Commit and push the changes:
+git add .
+git commit -m "Deploy to GitHub Pages"
+git push origin main
+Go to your repo settings on GitHub:
+
+Navigate to Settings > Pages
+
+Set the source to Deploy from a branch
+
+Choose branch: main and folder: /docs
+
+Save
+
+GitHub Pages will now serve your Angular app from https://innocentsibiya.github.io/myprofile/
+
+Thank you for visiting! If you have any feedback or suggestions, feel free to open an issue or connect with me.

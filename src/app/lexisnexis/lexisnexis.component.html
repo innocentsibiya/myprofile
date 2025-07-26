@@ -1,1 +1,9 @@
-<p>lexisnexis works!</p>
+<h2>{{ location }}</h2>
+<h3>{{ position }} - {{ duration }}</h3>
+<div class="lexisnexis">
+    <ul>
+        <li *ngFor="let item of achievements" class="lexisnexis-title">
+            {{ item }}
+        </li>
+    </ul>
+</div>
