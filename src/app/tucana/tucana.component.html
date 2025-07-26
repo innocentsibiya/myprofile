@@ -1,9 +1,7 @@
 <h2>{{location}}</h2>
 <h3>{{position}} - {{duration}}</h3>
 <div class="tucana">
-    <ul>
-        <li *ngFor="let item of achievements" class="tucana-title">
-            {{ item }}
-        </li>
-    </ul>
+    <div *ngFor="let item of achievements" class="tucana-title">
+        {{ item }}
+    </div>
 </div>
