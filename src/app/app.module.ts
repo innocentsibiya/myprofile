@@ -11,6 +11,7 @@ import { EducationComponent } from './education/education.component';
 import { PersonalinfoComponent } from './personalinfo/personalinfo.component';
 import { IntegrityComponent } from './integrity/integrity.component';
 import { CertificatesComponent } from './certificates/certificates.component';
+import { NavigationMenuSideComponent } from './navigation-menu-side/navigation-menu-side.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CertificatesComponent } from './certificates/certificates.component';
     EducationComponent,
     PersonalinfoComponent,
     IntegrityComponent,
-    CertificatesComponent
+    CertificatesComponent,
+    NavigationMenuSideComponent
   ],
   imports: [
     BrowserModule,
