@@ -1,36 +1,15 @@
-  <nav class="main-menu">
-    <ul>
-      <li>
-        <img src="assets/images/user.png" alt="Personal" class="company-icon" />
-        <a routerLink="/personalinfo" routerLinkActive="active">Personal Information</a>
-      </li>
-      <li>
-        <img src="assets/images/skills.png" alt="Skills" class="company-icon" />
-        <a routerLink="/skills" routerLinkActive="active">Technical Skills</a>
-      </li>
-      <li>
-        <img src="../../assets/images/integrity.png" alt="Integrity" class="company-icon" />
-        <a routerLink="/integrity" routerLinkActive="active">Integrity</a>
-      </li>
-      <li>
-        <img src="./../assets/images/lexisnexis.png" alt="LexisNexis" class="company-icon" />
-        <a routerLink="/lexisnexis" routerLinkActive="active">LexisNexis</a>
-      </li>
-      <li>
-        <img src="assets/images/tucana.png" alt="Tucana" class="company-icon" />
-        <a routerLink="/tucana" routerLinkActive="active">Tucana</a>
-      </li>
-      <li>
-        <img src="assets/images/education.png" alt="Education" class="company-icon" />
-        <a routerLink="/education" routerLinkActive="active">Education</a>
-      </li>
-      <li>
-        <img src="assets/images/certificates.png" alt="Certificates" class="company-icon" />
-        <a routerLink="/certificates" routerLinkActive="active">Certifications</a>
-      </li>
-      <li>
-        <img src="assets/images/references.png" alt="References" class="company-icon" />
-        <a routerLink="/references" routerLinkActive="active">References</a>
-      </li>
-    </ul>
-  </nav>
+<nav class="main-menu">
+  <ul>
+    <li *ngFor="let item of menuItems">
+      <img [src]="item.icon" [alt]="item.label" class="company-icon" />
+      <a
+        [routerLink]="item.link"
+        routerLinkActive="active"
+        [class.active]="activeLink === item.link"
+        (click)="setActive(item.link)"
+      >
+        {{ item.label }}
+      </a>
+    </li>
+  </ul>
+</nav>

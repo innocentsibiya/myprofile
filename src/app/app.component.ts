@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NavigationMenuSideComponent } from './navigation-menu-side/navigation-menu-side.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myprofile';
+  @ViewChild(NavigationMenuSideComponent)
+  navMenu!: NavigationMenuSideComponent;
+
+  // Example: method to get the active link
+  get currentActiveLink(): string {
+    return this.navMenu ? this.navMenu.getActiveLink() : '';
+  }
 }

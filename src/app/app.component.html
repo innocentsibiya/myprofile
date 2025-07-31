@@ -1,7 +1,17 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <img width="40" alt="Innocent Picture" src="../assets/images/innocent.jpg" class="logo" />
+  <img width="50" alt="Innocent Picture" src="../assets/images/innocent.jpg" class="logo" />
   <span>Welcome To My Profile</span>
+  <ul class="company-toolbar">
+  <li><img src="assets/images/user.png" alt="Personal" class="company-icon" /></li>
+  <li><img src="assets/images/skills.png" alt="Skills" /></li>
+  <li><img src="assets/images/integrity-icon.png" alt="Integrity" /></li>
+  <li><img src="assets/images/lexisnexis-icon.png" alt="LexisNexis" /></li>
+  <li><img src="assets/images/tucana-icon.png" alt="Tucana" /></li>
+  <li><img src="assets/images/education-icon.png" alt="Education" /></li>
+  <li><img src="assets/images/certificates.png" alt="Certificates" /></li>
+  <li><img src="assets/images/references.png" alt="References" /></li>
+</ul>
   <div class="spacer"></div>
   <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
     <svg id="twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
@@ -25,6 +35,8 @@
   <app-navigation-menu-side></app-navigation-menu-side>
 
   <div class="content" role="main">
+  <ng-container *ngIf="!currentActiveLink || currentActiveLink === ''">
+    <!-- Show default content if no link is active -->
     <div>
       <h1>PERSONAL INFORMATION</h1>
       <app-personalinfo></app-personalinfo>
@@ -57,7 +69,8 @@
       <h1>REFERENCES</h1>
       <app-references></app-references>
     </div>
-  </div>
+  </ng-container>
+  <ng-container *ngIf="currentActiveLink && currentActiveLink !== ''">
+    <router-outlet></router-outlet>
+  </ng-container>
 </div>
-
-<router-outlet></router-outlet>
