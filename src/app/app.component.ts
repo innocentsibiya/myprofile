@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavigationMenuSideComponent } from './navigation-menu-side/navigation-menu-side.component';
+import { ThemeService } from './services/themetoggler.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,19 @@ import { NavigationMenuSideComponent } from './navigation-menu-side/navigation-m
 })
 export class AppComponent {
   title = 'myprofile';
-  @ViewChild(NavigationMenuSideComponent)
-  navMenu!: NavigationMenuSideComponent;
+  @ViewChild(NavigationMenuSideComponent) navMenu!: NavigationMenuSideComponent;
 
-  // Example: method to get the active link
+  /**
+   *
+   */
+  constructor(public themeService: ThemeService) {
+    
+  }
+
+ toggleTheme() {
+    this.themeService.toggleTheme();
+  }
+
   get currentActiveLink(): string {
     return this.navMenu ? this.navMenu.getActiveLink() : '';
   }
